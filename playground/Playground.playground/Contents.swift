@@ -1,4 +1,3 @@
-//: A UIKit based Playground for presenting user interface
   
 import UIKit
 import PlaygroundSupport
@@ -37,7 +36,7 @@ struct LabelStyle:Style {
 extension LabelStyle {
     static let headerStyle:LabelStyle = LabelStyle(bgColor: .white, textColor: .black, align: .center, font: UIFont.systemFont(ofSize: 20, weight: .bold) )
     
-    static let noteStyle:LabelStyle = LabelStyle(bgColor: .white, textColor: .black, align: .center, font: UIFont.systemFont(ofSize: 11, weight: .thin) )
+    static let noteStyle:LabelStyle = LabelStyle(bgColor: .white, textColor: .black, align: .left, font: UIFont.systemFont(ofSize: 11, weight: .thin) )
 }
 
 
@@ -55,6 +54,8 @@ class PlaygroundControler:UIViewController {
         label.frame = CGRect(x: 100, y: 20, width: 50, height: 20)
         
         label.apply(style: LabelStyle.noteStyle)
+        
+        view
     }
 }
 
